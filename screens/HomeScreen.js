@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
 import React from 'react'
-import Header from '../components/Header'
+import Header from '../components/CustomInput'
+import SignInScreen from './SignInScreen'
 
 const HomeScreen = () => {
   return (
     <SafeAreaView>
-      <Header/>
+      <SignInScreen/>
     </SafeAreaView>
   )
 }
