@@ -12,10 +12,12 @@ import CustomButton from "../components/CustomButton";
 import React, { useState } from "react";
 import SocialSignInButtons from "../components/SocialSignInButtons";
 
-const SignInScreen = () => {
-  const [username, setUsername] = useState("");
 
+const SignUpScreen = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordRepeat, setPasswordRepeat] = useState("");
 
   const onSignInPressed = () => {
     console.warn("Sign in");
@@ -23,10 +25,18 @@ const SignInScreen = () => {
   const onForgotPasswordPressed = () => {
     console.warn("Forgot Password?");
   };
-  
 
+// Sign up Button
   const onSignUpPressed = () => {
     console.warn("Sign Up");
+  };
+  // termsof use hot button
+  const onTermsOfUsePressed = () => {
+    console.warn("Terms Of Use");
+  };
+  // privacy policy hotlink
+  const onPolicyPressed = () => {
+    console.warn('Privacy Policy Pressed');
   };
 
   const { height } = useWindowDimensions();
@@ -38,6 +48,7 @@ const SignInScreen = () => {
           style={[styles.logo, { height: height * 0.3 }]}
           resizeMode="contain"
         />
+        <Text style={styles.title}>Create an Account</Text>
         <CustomInput
           style={styles.custInput}
           placeholder="Username"
@@ -46,21 +57,35 @@ const SignInScreen = () => {
         />
         <CustomInput
           style={styles.custInput}
+          placeholder="Johndoe@email.com"
+          value={email}
+          setValue={setEmail}
+        />
+        <CustomInput
+          style={styles.custInput}
           placeholder="password"
           value={password}
           setValue={setPassword}
           secureTextEntry={true}
         />
-        <CustomButton text="Sign in" onPress={onSignInPressed} />
-        <CustomButton
-          text="Forgot Password?"
-          onPress={onForgotPasswordPressed}
-          type="TERTIARY"
+        <CustomInput
+          style={styles.custInput}
+          placeholder="Confirm password"
+          value={passwordRepeat}
+          setValue={setPasswordRepeat}
+          secureTextEntry={true}
         />
+        <CustomButton text="Sign Up" onPress={onSignUpPressed} />
+        
+        <Text style={styles.text}>
+            By registering, you confirm that you accept our {''}
+            <Text style={styles.link} onPress={onTermsOfUsePressed}>Terms of Use</Text> and {''}
+            <Text style={styles.link} onPress={onPolicyPressed}>Privacy Policy</Text>.
+        </Text>
         <SocialSignInButtons/>
 
         <CustomButton
-          text="Don't have an account? Create one now..."
+          text="Already have an account? Login now..."
           onPress={onSignUpPressed}
           type="TERTIARY"
         />
@@ -69,7 +94,7 @@ const SignInScreen = () => {
   );
 };
 
-export default SignInScreen;
+export default SignUpScreen;
 
 const styles = StyleSheet.create({
   view: {
@@ -87,5 +112,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "bold",
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    margin: 10,
+    color: '#1b0282',
+  },
+  text: {
+   color: '#BCBCBC',
+   marginVertical: 15,
+  },
+  link: {
+    color: '#4D15F6'
   },
 });
