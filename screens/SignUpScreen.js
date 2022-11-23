@@ -19,13 +19,10 @@ const SignUpScreen = () => {
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
+  // Registered users redirect sign in
   const onSignInPressed = () => {
     console.warn("Sign in");
   };
-  const onForgotPasswordPressed = () => {
-    console.warn("Forgot Password?");
-  };
-
 // Sign up Button
   const onSignUpPressed = () => {
     console.warn("Sign Up");
@@ -40,8 +37,9 @@ const SignUpScreen = () => {
   };
 
   const { height } = useWindowDimensions();
+
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView  showsVerticalScrollIndicator={false}>
       <View style={styles.view}>
         <Image
           source={Logo}
@@ -86,7 +84,7 @@ const SignUpScreen = () => {
 
         <CustomButton
           text="Already have an account? Login now..."
-          onPress={onSignUpPressed}
+          onPress={onSignInPressed}
           type="TERTIARY"
         />
       </View>
@@ -112,6 +110,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "bold",
+    borderColor: 'black',
+    borderWidth: 6,
   },
   title: {
     fontSize: 24,

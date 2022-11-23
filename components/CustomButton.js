@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
         
         width:'100%',
         height: 50,
-        padding:'15',
-        marginVertical:5,
+        padding: 15,
+        marginVertical:15,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
@@ -28,11 +28,19 @@ const styles = StyleSheet.create({
     container_TERTIARY: {
         
     },
+    container_SECONDARY: {
+        borderColor:'#3b71f3',
+        borderWidth: 2,
+        marginHorizontal: 25,
+    },
     text: {
         fontWeight: 'bold',
-        color:'#FFF',
+        color:'blue',
     },
     text_TERTIARY: {
         color:'gray',
+    },
+    text_SECONDARY: {
+        color:'blue',
     },
 })
