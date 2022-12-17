@@ -4,9 +4,7 @@ import React from 'react'
 
 const Navi = () => {
   return (
-    <NavigationContainer>
       <Text>Navigation</Text>
-    </NavigationContainer>
   )
 }
 

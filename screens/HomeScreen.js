@@ -10,18 +10,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
+
 const HomeScreen = () => {
-  const stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator();
   return (
-    <NavigationContainer>
-      <stack.Navigator>
-        <stack.Screen name="HomeScreen" component = {HomeScreen}/>
-        <stack.Screen name="Sign In" component = {SignInScreen}/>
-        <stack.Screen name="Sign Up" component = {SignUpScreen}/>
-        <stack.Screen name="Email Verification" component = {EmailConScreen}/>
-        <stack.Screen name="Reset Password" component = {ResetPasswordScreen}/>
-      </stack.Navigator>
-    </NavigationContainer>
+    <View>
+      
+    </View>
   )
 }
 
