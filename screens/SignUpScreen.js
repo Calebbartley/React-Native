@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import SocialSignInButtons from "../components/SocialSignInButtons";
 
 
-const SignUpScreen = () => {
+const SignUpScreen = ({navigation}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -73,7 +73,7 @@ const SignUpScreen = () => {
           setValue={setPasswordRepeat}
           secureTextEntry={true}
         />
-        <CustomButton text="Sign Up" onPress={onSignUpPressed} />
+        <CustomButton text="Sign Up" onPress={()=> navigation.navigate('EmailCon')} />
         
         <Text style={styles.text}>
             By registering, you confirm that you accept our {''}
@@ -84,7 +84,7 @@ const SignUpScreen = () => {
 
         <CustomButton
           text="Already have an account? Login now..."
-          onPress={onSignInPressed}
+          onPress={()=> navigation.navigate('Sign-In')}
           type="TERTIARY"
         />
       </View>

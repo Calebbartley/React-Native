@@ -6,17 +6,14 @@ import SignUpScreen from './SignUpScreen'
 import EmailConScreen from './EmailConScreen'
 import ResetPasswordScreen from './ResetPasswordScreen'
 import Navi from '../components/navigation/Navi';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, StackActions} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-
 const HomeScreen = () => {
-  const Stack = createNativeStackNavigator();
+  const stack = createNativeStackNavigator();
   return (
-    <View>
-      
-    </View>
+  <View></View>
   )
 }
 

@@ -11,8 +11,12 @@ import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
 import React, { useState } from "react";
 import SocialSignInButtons from "../components/SocialSignInButtons";
+import SignUpScreen from "./SignUpScreen";
+import { NavigationAction } from "@react-navigation/native";
 
-const SignInScreen = () => {
+
+
+const SignInScreen = ({navigation}) => {
   const [username, setUsername] = useState("");
 
   const [password, setPassword] = useState("");
@@ -20,10 +24,10 @@ const SignInScreen = () => {
   const onSignInPressed = () => {
     console.warn("Sign in");
   };
+
   const onForgotPasswordPressed = () => {
     console.warn("Forgot Password?");
   };
-  
 
   const onSignUpPressed = () => {
     console.warn("Sign Up");
@@ -54,14 +58,14 @@ const SignInScreen = () => {
         <CustomButton text="Sign in" onPress={onSignInPressed} />
         <CustomButton
           text="Forgot Password?"
-          onPress={onForgotPasswordPressed}
+          onPress={()=> navigation.navigate('ResetPass')}
           type="TERTIARY"
         />
         <SocialSignInButtons/>
 
         <CustomButton
           text="Don't have an account? Create one now..."
-          onPress={onSignUpPressed}
+          onPress={()=> navigation.navigate('Sign-Up')}
           type="TERTIARY"
         />
       </View>

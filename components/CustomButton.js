@@ -14,7 +14,7 @@ export default CustomButton
 const styles = StyleSheet.create({
     container:{
         
-        width:'100%',
+        width:'50%',
         height: 50,
         padding: 15,
         marginVertical:15,
