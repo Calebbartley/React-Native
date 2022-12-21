@@ -58,7 +58,7 @@ const SignInScreen = ({navigation}) => {
         <CustomButton text="Sign in" onPress={onSignInPressed} />
         <CustomButton
           text="Forgot Password?"
-          onPress={()=> navigation.navigate('ResetPass')}
+          onPress={()=> navigation.navigate('Reset Password')}
           type="TERTIARY"
         />
         <SocialSignInButtons/>

@@ -16,8 +16,8 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name='Sign-In' component={SignInScreen}/>
         <Stack.Screen name='Sign-Up' component={SignUpScreen}/>
-        <Stack.Screen name='EmailCon' component={EmailConScreen}/>
-        <Stack.Screen name='ResetPass' component={ResetPasswordScreen}/>
+        <Stack.Screen name='Email Confirmation' component={EmailConScreen}/>
+        <Stack.Screen name='Reset Password' component={ResetPasswordScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

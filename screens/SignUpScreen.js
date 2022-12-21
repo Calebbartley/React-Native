@@ -73,7 +73,7 @@ const SignUpScreen = ({navigation}) => {
           setValue={setPasswordRepeat}
           secureTextEntry={true}
         />
-        <CustomButton text="Sign Up" onPress={()=> navigation.navigate('EmailCon')} />
+        <CustomButton text="Sign Up" onPress={()=> navigation.navigate('Email Confirmation')} />
         
         <Text style={styles.text}>
             By registering, you confirm that you accept our {''}

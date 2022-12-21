@@ -20,7 +20,7 @@ export default CustomInput;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#FFFFFF",
-    width: "100%",
+    width: "90%",
     borderColor: "#e8e8e8",
     borderWidth: 1,
     borderRadius: 5,
