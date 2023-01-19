@@ -27,11 +27,11 @@ const SignUpScreen = ({navigation}) => {
   const onSignUpPressed = () => {
     console.warn("Sign Up");
   };
-  // termsof use hot button
+  // terms of use hot link
   const onTermsOfUsePressed = () => {
     console.warn("Terms Of Use");
   };
-  // privacy policy hotlink
+  // privacy policy hot link
   const onPolicyPressed = () => {
     console.warn('Privacy Policy Pressed');
   };

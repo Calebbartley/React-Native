@@ -13,7 +13,7 @@ import React, { useState } from "react";
 
 const EmailConScreen = () => {
   const [username, setUsername] = useState("");
-  
+
   const [code, setCode] = useState("");
 
   // Confirmation code

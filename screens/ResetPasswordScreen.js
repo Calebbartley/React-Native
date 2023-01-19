@@ -13,12 +13,12 @@ import React, { useState } from "react";
 const ResetPasswordScreen = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  
+
   // Back to sign in
   const onSignInPressed = () => {
     console.warn("Back to Sign in ");
   };
-  
+
   // password request code
   const onSendCodePressed = () => {
     console.warn("Send code Requested");
